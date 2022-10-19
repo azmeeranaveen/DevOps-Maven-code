@@ -29,7 +29,7 @@ pipeline
             steps
             {
                git 'https://github.com/Ersandeep977/FunctionalTesting.git'
-               sh 'java -jar /var/lib/jenkins/workspace/Pipeline-5/testing.jar'
+               sh 'java -jar /var/lib/jenkins/workspace/Pipeline-6/testing.jar'
             }
         }
        
