@@ -7,7 +7,7 @@ pipeline
         {
             steps
             {
-                git 'https://github.com/Ersandeep977/DevOps-Maven-code.git'
+                git 'https://github.com/azmeeranaveen/DevOps-Maven-code.git'
             }
         }
         stage('ContinuousBuild')
@@ -28,7 +28,7 @@ pipeline
         {
             steps
             {
-               git 'https://github.com/Ersandeep977/FunctionalTesting.git'
+               git 'https://github.com/azmeeranaveen/FunctionalTesting.git'
                sh 'java -jar /var/lib/jenkins/workspace/job-2/testing.jar'
             }
         }
