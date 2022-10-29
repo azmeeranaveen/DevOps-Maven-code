@@ -21,15 +21,15 @@ pipeline
         {
             steps
             {
-                deploy adapters: [tomcat9(credentialsId: 'b6a3e172-533b-4d1a-9da0-10d82c1bc003', path: '', url: 'http://18.117.250.171:8080')], contextPath: 'test3', war: '**/*.war'
-               }
+                deploy adapters: [tomcat9(credentialsId: 'cda00675-86e1-4f1b-a8f6-0e12a6051a7e', path: '', url: 'http://35.173.233.22:8080')], contextPath: 'testapp', war: '**/*.war'
+                }
         }
-        stage('ContinuousTesting')
+       stage('ContinuousTesting')
         {
             steps
             {
                git 'https://github.com/Ersandeep977/FunctionalTesting.git'
-               sh 'java -jar /var/lib/jenkins/workspace/Pipeline-6/testing.jar'
+               sh 'java -jar /var/lib/jenkins/workspace/job-2/testing.jar'
             }
         }
        
