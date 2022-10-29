@@ -32,11 +32,11 @@ pipeline
                sh 'java -jar /var/lib/jenkins/workspace/job-2/testing.jar'
             }
         }
-        stage('testing')
+        stage('Contnuos Delpoy')
         {
             steps
             {
-               sh 'date'
+               deploy adapters: [tomcat9(credentialsId: 'cda00675-86e1-4f1b-a8f6-0e12a6051a7e', path: '', url: 'http://54.81.225.19:8080')], contextPath: 'prodapp', war: '**/*.war'
             }
         }
        
