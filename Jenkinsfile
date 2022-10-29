@@ -32,6 +32,13 @@ pipeline
                sh 'java -jar /var/lib/jenkins/workspace/job-2/testing.jar'
             }
         }
+        stage('testing')
+        {
+            steps
+            {
+               sh 'date'
+            }
+        }
        
     }    
 }
